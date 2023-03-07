@@ -1,5 +1,14 @@
-<ul>
+<ul class=list-group>
   <% @articles.each do |article| %>
-    <li><%= link_to(article.title,article_path(article)) %></li>
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="lead text-decoration-none">
+        <%= link_to(article.title,article_path(article))%>
+      </div>
+      <div>
+        <small class="mb-1">
+          <%= article.content%>
+        </small>
+      </div>
+    </div>
   <% end %>
 </ul>
