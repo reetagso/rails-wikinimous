@@ -1,7 +1,10 @@
 <h2><%= @article.title %></h2>
 <p><%= @article.content %></p>
 
-<%= link_to "Delete",
-  article_path(@article),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+<div>
+  <i class="fa-solid fa-trash-can"></i>
+  <%= link_to "Delete",
+    article_path(@article),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+</div>
